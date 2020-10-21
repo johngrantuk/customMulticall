@@ -23,12 +23,6 @@ contract PoolState {
         }
     }
 
-    struct PoolInfo {
-        uint balance;
-        uint normalizedWeight;
-        uint fee;
-    }
-
     function getPoolInfo(address[][] calldata pools, uint length) external view returns (uint[] memory) {
         uint[] memory results = new uint[](length);
         uint count = 0;
@@ -38,16 +32,16 @@ contract PoolState {
             address poolAddr = pools[i][0];
 
             // console.log("Pool: %s", poolAddr);
-            results[count] = getUint(poolAddr, abi.encodeWithSignature("getSwapFee()"));
-            count++;
+            // results[count] = getUint(poolAddr, abi.encodeWithSignature("getSwapFee()"));
+            // count++;
 
             for (uint j = 1; j < pools[i].length; j++) {
               address tokenAddr = pools[i][j];
               // console.log("Token: %s", tokenAddr);
               results[count] = getUint(poolAddr, abi.encodeWithSignature("getBalance(address)", tokenAddr));
               count++;
-              results[count] = getUint(poolAddr, abi.encodeWithSignature("getDenormalizedWeight(address)", tokenAddr));
-              count++;
+              // results[count] = getUint(poolAddr, abi.encodeWithSignature("getDenormalizedWeight(address)", tokenAddr));
+              // count++;
               // console.log("Token Done");
             }
         }
