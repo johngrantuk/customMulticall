@@ -1,0 +1,36 @@
+{
+  "name": "account-scanner",
+  "version": "1.0.0",
+  "description": "Account Scanner ===============",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@balancer-labs/sor": "file:/Users/jg/balancer-sor",
+    "bignumber.js": "^9.0.1",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "ethereum-waffle": "^3.1.1",
+    "ethers": "^5.0.18",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.4.8",
+    "@nomiclabs/buidler-ethers": "^2.0.2",
+    "@nomiclabs/buidler-waffle": "^2.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricmoo/account-scanner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricmoo/account-scanner/issues"
+  },
+  "homepage": "https://github.com/ricmoo/account-scanner#readme"
+}
