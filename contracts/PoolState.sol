@@ -23,12 +23,6 @@ contract PoolState {
         }
     }
 
-    struct PoolInfo {
-        uint balance;
-        uint normalizedWeight;
-        uint fee;
-    }
-
     function getPoolInfo(address[][] calldata pools, uint length) external view returns (uint[] memory) {
         uint[] memory results = new uint[](length);
         uint count = 0;
