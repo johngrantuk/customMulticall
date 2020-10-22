@@ -12,6 +12,7 @@ async function main() {
   console.log("poolState deployed to:", poolState.address);
   // 0x76d6043458e92149Aedfc69925B37080366F793E - Norm weights
   // 0x9907109e5Ca97aE76f684407318D1B8ea119c83B - Denorm
+  // 0x71c7f1086aFca7Aa1B0D4d73cfa77979d10D3210 - Balances only
 }
 
 main()

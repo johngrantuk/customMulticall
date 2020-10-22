@@ -13,5 +13,5 @@ For 1000 test pools comparing [Multicall contract](https://github.com/makerdao/m
 
 | Method | Time | Time | Time | Time |
 | ----------- | ----------- | ----------- |  ----------- | ----------- |
-| Multicall | 11707.322ms | 8494.433ms | 12765.703ms | 8985.448ms |
-| Custom | 4056.966ms | 4210.295ms | 4049.101ms | 4078.856ms |
+| Multicall | 12338.828ms | 9077.579ms | 10057.046ms | 13939.428ms |
+| Custom | 3319.800ms | 3025.077ms | 3186.130ms | 3336.242ms |

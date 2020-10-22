@@ -92,19 +92,18 @@ describe("PoolState", function() {
     pools.pools.forEach((pool, index) => {
       console.log(`${index} ${pool.id}`);
       addresses.push([pool.id]);
-      total += 1;
+
       pool.tokens.forEach((token, tokenIndex) => {
         addresses[index].push(token.address);
-        total += 2;
+        total ++;
       })
     })
 
     let onChainInfo = await poolState.getPoolInfo(addresses, total);
 
-    expect(onChainInfo[0]).to.equal(1000000000000); // swapFee
-    expect(onChainInfo[1]).to.equal(ethers.utils.parseEther('50').toString()); // token balance
-    expect(onChainInfo[2]).to.equal(ethers.utils.parseEther('2').toString()); // token weight
-    expect(onChainInfo[3]).to.equal(ethers.utils.parseEther('60').toString()); // token balance
-    expect(onChainInfo[4]).to.equal(ethers.utils.parseEther('7').toString()); // token weight
+    expect(onChainInfo.length).to.equal(2);
+    expect(total).to.equal(2);
+    expect(onChainInfo[0]).to.equal(ethers.utils.parseEther('50').toString()); // token balance
+    expect(onChainInfo[1]).to.equal(ethers.utils.parseEther('60').toString()); // token balance
   });
 });

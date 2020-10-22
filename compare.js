@@ -8,7 +8,7 @@ const provider = new JsonRpcProvider(
         `https://kovan.infura.io/v3/${process.env.INFURA}`
     );
 
-const contractAddress = "0x9907109e5Ca97aE76f684407318D1B8ea119c83B";
+const contractAddress = "0x71c7f1086aFca7Aa1B0D4d73cfa77979d10D3210";
 
 (async function() {
 
@@ -81,7 +81,7 @@ const contractAddress = "0x9907109e5Ca97aE76f684407318D1B8ea119c83B";
         provider
     );
     console.timeEnd('multicall');
-    /*
+
     console.log(
     `Swap fee: ${customPools.pools[0].swapFee.toString()}`
     );
@@ -94,7 +94,7 @@ const contractAddress = "0x9907109e5Ca97aE76f684407318D1B8ea119c83B";
         console.log(token.balance.toString());
         console.log(token.denormWeight.toString());
     });
-    */
+
 
     poolsMulticall = _.cloneDeep(pools);
 
@@ -106,7 +106,7 @@ const contractAddress = "0x9907109e5Ca97aE76f684407318D1B8ea119c83B";
         provider
     );
     console.timeEnd('multicall');
-    /*
+
     console.log(
     `Swap fee: ${multicallPools.pools[0].swapFee.toString()}`
     );
@@ -119,7 +119,7 @@ const contractAddress = "0x9907109e5Ca97aE76f684407318D1B8ea119c83B";
         console.log(token.balance.toString());
         console.log(token.denormWeight.toString());
     });
-    */
+    
 
     // Check results are the same
     if(!_.isEqual(customPools, multicallPools)){
